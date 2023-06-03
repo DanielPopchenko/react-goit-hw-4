@@ -1,0 +1,21 @@
+.header {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.link {
+    cursor: pointer;
+    color: #212121;
+    text-decoration: none;
+}
+
+.activeLink {
+    composes: link;
+    color: rgb(17, 168, 214);
+}
+
+.link+.link {
+    margin-left: 25px;
+}
