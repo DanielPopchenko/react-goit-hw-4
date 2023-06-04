@@ -1,21 +1,19 @@
 import React from "react";
-import { useState } from "react";
+
 import { useForm } from "react-hook-form";
+import styles from "./Form.module.css";
 
-const APIKey = "27c06349f21453208f65a00800d34cca";
+// !! Стилизировать форму и инпут !!
+// TODO: Разобраться с LocalStorage
 
-// ! Сделать маршрут на детали отдельного фильма
-
-export default function Form({ movies, onFormSubmit }) {
+export default function Form({ onFormSubmit }) {
 	const { register, handleSubmit } = useForm();
 
-	console.log(movies);
-
 	return (
-		<div>
+		<div className={styles.formContainer}>
 			<form onSubmit={handleSubmit(onFormSubmit)}>
-				<label>
-					Search movie <br />
+				<label className={styles.label}>
+					Search movie
 					<input type="text" name="movie" {...register("movie")} />
 				</label>
 

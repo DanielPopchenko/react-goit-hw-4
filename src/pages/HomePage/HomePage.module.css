@@ -1,0 +1,52 @@
+.homePage {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.heading {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient( rgba(29, 129, 253, 1) 36%, rgba(251, 239, 26, 1) 67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.moviesList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.movieCard {
+    display: block;
+    min-width: 300px;
+    min-height: 320px;
+    padding: 20px;
+    transition: ease-in 0.2s;
+    border-radius: 20px;
+}
+
+.movieCard:hover {
+    background-color: #0000009a;
+    color: #fff;
+}
+
+.movieHeading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.text {
+    text-align: center;
+}
+
+.movieImg {
+    border-radius: 20px;
+    width: 500px;
+    height: 280px;
+}

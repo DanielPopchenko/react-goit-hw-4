@@ -1,14 +1,33 @@
-import React from "react";
 import styles from "./HomePage.module.css";
 
-export default function HomePage() {
+const today = new Date().toLocaleDateString("en-us", {
+	weekday: "long",
+	year: "numeric",
+	month: "short",
+	day: "numeric",
+});
+
+export default function HomePage({ popularMovies }) {
 	return (
-		<div>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, deserunt
-				animi commodi vel perspiciatis repellendus similique autem earum quos
-				error vitae maxime quod tempore eos. Nam cum nulla incidunt sint!
+		<div className={styles.homePage}>
+			<h1 className={styles.heading}>Search for films without troubles!</h1>
+			<p className={styles.text}>
+				Here are the most popular movies at the moment: <span>{today}</span>
 			</p>
+
+			<ul className={styles.moviesList}>
+				{popularMovies &&
+					popularMovies.map((movie) => (
+						<li key={movie.id} className={styles.movieCard}>
+							<h1 className={styles.movieHeading}>{movie.original_title}</h1>
+							<img
+								src={`http://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+								alt="film preview"
+								className={styles.movieImg}
+							/>
+						</li>
+					))}
+			</ul>
 		</div>
 	);
 }
