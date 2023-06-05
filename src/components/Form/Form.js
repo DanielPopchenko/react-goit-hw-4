@@ -11,13 +11,21 @@ export default function Form({ onFormSubmit }) {
 
 	return (
 		<div className={styles.formContainer}>
-			<form onSubmit={handleSubmit(onFormSubmit)}>
-				<label className={styles.label}>
-					Search movie
-					<input type="text" name="movie" {...register("movie")} />
-				</label>
+			<form className={styles.form} onSubmit={handleSubmit(onFormSubmit)}>
+				<div className={styles.inputContainer}>
+					<label className={styles.label}>Search movie</label>
 
-				<button type="submit">Search</button>
+					<input
+						type="text"
+						name="movie"
+						{...register("movie")}
+						className={styles.input}
+					/>
+				</div>
+
+				<button type="submit" className={styles.button}>
+					Search
+				</button>
 			</form>
 		</div>
 	);

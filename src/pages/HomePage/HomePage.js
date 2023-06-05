@@ -12,7 +12,8 @@ export default function HomePage({ popularMovies }) {
 		<div className={styles.homePage}>
 			<h1 className={styles.heading}>Search for films without troubles!</h1>
 			<p className={styles.text}>
-				Here are the most popular movies at the moment: <span>{today}</span>
+				Here are the most popular movies at the moment: <br />
+				<span className={styles.date}>{today}</span>
 			</p>
 
 			<ul className={styles.moviesList}>

@@ -1,15 +1,16 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 20px;
-    color: #212121;
+    color: #d2cfcf;
     overflow-x: hidden;
+    background-color: #403f3f;
 }
 
 .container {
     display: block;
     width: 1400px;
-    padding-right: 20px;
-    padding-left: 20px;
+    /* padding-right: 20px;
+    padding-left: 20px; */
     margin-left: auto;
     margin-right: auto;
 }

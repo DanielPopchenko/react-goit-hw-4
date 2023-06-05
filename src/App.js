@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
 import HomePage from "./pages/HomePage/HomePage";
 import Movies from "./pages/MoviesPage/Movies";
+import MovieDetails from "./pages/MovieDetails/MovieDetails";
+
 import fetchPopularFilms from "./utils/fetchPopularFilms";
 
 function App() {
@@ -36,7 +38,7 @@ function App() {
 
 					{/* ! Сделать маршрут на детали отдельного фильма ! */}
 
-					<Route path="'/movies/:movieId'" element={<Movies />}></Route>
+					<Route path="/movies/:movieId" element={<MovieDetails />}></Route>
 				</Routes>
 			</div>
 		</>
