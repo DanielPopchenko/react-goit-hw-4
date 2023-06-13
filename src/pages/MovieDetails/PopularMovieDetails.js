@@ -1,11 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 
 import { useNavigate, useParams, Link, Outlet } from 'react-router-dom';
 import fetchMovieByID from '../../utils/fetchMovieByID';
 import { handleReplaceImg } from '../MoviesPage/Movies';
-// import fetchMovieCast from '../../utils/fetchMovieCast';
-// import MovieCast from '../MovieCast/MovieCast';
-
 import styles from './MovieDetails.module.css';
 
 export default function PopularMovieDetails() {
@@ -57,7 +54,9 @@ export default function PopularMovieDetails() {
         </>
       )}
 
-      <Outlet />
+      <Suspense fallback={<div>Loading subpage ...</div>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 }

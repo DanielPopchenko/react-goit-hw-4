@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams, Link, Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 
 import fetchMovieByID from '../../utils/fetchMovieByID';
 import { handleReplaceImg } from '../MoviesPage/Movies';
@@ -56,7 +57,9 @@ export default function MovieDetails() {
           </div>
         </>
       )}
-      <Outlet />
+      <Suspense fallback={<div>Loading subpage...</div>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 }

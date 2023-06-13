@@ -1,17 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation/Navigation';
-import HomePage from './pages/HomePage/HomePage';
-import Movies from './pages/MoviesPage/Movies';
-import MovieDetails from './pages/MovieDetails/MovieDetails';
-import PopularMovieDetails from './pages/MovieDetails/PopularMovieDetails';
-import MovieCast from './pages/MovieCast/MovieCast';
-import PopularMovieCast from './pages/MovieCast/PopularMovieCast';
-import PopularMoviesReviews from './pages/Reviews/PopularMovieReviews';
-import NotFoundView from './pages/NotFoundView/NotFoundView';
-import MoviesReviews from './pages/Reviews/MoviesReviews';
 
+import { lazy } from 'react';
 import fetchPopularFilms from './utils/fetchPopularFilms';
+
+const Navigation = lazy(() => import('./components/Navigation/Navigation'));
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+const Movies = lazy(() => import('./pages/MoviesPage/Movies'));
+const MovieDetails = lazy(() => import('./pages/MovieDetails/MovieDetails'));
+const PopularMovieDetails = lazy(() => import('./pages/MovieDetails/PopularMovieDetails'));
+const MovieCast = lazy(() => import('./pages/MovieCast/MovieCast'));
+const PopularMovieCast = lazy(() => import('./pages/MovieCast/PopularMovieCast'));
+const PopularMoviesReviews = lazy(() => import('./pages/Reviews/PopularMovieReviews'));
+const MoviesReviews = lazy(() => import('./pages/Reviews/MoviesReviews'));
+const NotFoundView = lazy(() => import('./pages/NotFoundView/NotFoundView'));
 
 function App() {
   const [popularMovies, setPopularMovies] = useState(
