@@ -1,0 +1,26 @@
+.movieCast {
+    display: block;
+    width: 100%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.movieCastList {
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.actorCard img {
+    width: 340px;
+    height: 450px;
+    border-radius: 2px;
+}
+
+.actorName {
+    margin-bottom: 10px;
+}

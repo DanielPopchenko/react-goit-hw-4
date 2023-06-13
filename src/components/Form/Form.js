@@ -6,7 +6,7 @@ import styles from "./Form.module.css";
 // !! Стилизировать форму и инпут !!
 // TODO: Разобраться с LocalStorage
 
-export default function Form({ onFormSubmit }) {
+export default function Form({ onFormSubmit, onBtnClick }) {
 	const { register, handleSubmit } = useForm();
 
 	return (
@@ -23,7 +23,7 @@ export default function Form({ onFormSubmit }) {
 					/>
 				</div>
 
-				<button type="submit" className={styles.button}>
+				<button type="submit" className={styles.button} onClick={onBtnClick}>
 					Search
 				</button>
 			</form>

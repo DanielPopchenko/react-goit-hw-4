@@ -1,0 +1,88 @@
+.movieDetailsContainer {
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 150px;
+}
+
+.contolls {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    align-items: center;
+}
+
+.contolls a+button {
+    margin-left: 10px;
+}
+
+.goBackBtn {
+    position: absolute;
+    top: 75px;
+    left: 40px;
+    cursor: pointer;
+    display: inline-block;
+    min-height: 20px;
+    padding: 10px 28px;
+    font-size: 17px;
+    border: none;
+    background-color: cornflowerblue;
+    color: #fff;
+    border-radius: 5px;
+    align-self: center;
+    transition: ease-in 0.1s;
+}
+
+.goBackBtn:hover {
+    background-color: rgba(251, 239, 26, 1);
+    color: cornflowerblue;
+}
+
+.movieHomePageLink {
+    cursor: pointer;
+    display: inline-block;
+    min-height: 20px;
+    padding: 15px 40px;
+    font-size: 17px;
+    border: none;
+    background-color: cornflowerblue;
+    color: #fff;
+    border-radius: 5px;
+    align-self: center;
+    transition: ease-in 0.1s;
+}
+
+.movieHomePageLink:hover {
+    background-color: rgba(251, 239, 26, 1);
+    color: cornflowerblue;
+}
+
+.movieCastBtn {
+    min-width: 70px;
+    display: inline-block;
+    background-color: cornflowerblue;
+    color: #fff;
+    padding: 16px 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 17px;
+    transition: ease-in 0.1s;
+}
+
+.movieCastBtn:hover {
+    background-color: rgba(251, 239, 26, 1);
+    color: cornflowerblue;
+}
+
+.movieImg {
+    align-self: center;
+    border-radius: 20px;
+}
+
+.movieHeading {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}

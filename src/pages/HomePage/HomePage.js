@@ -1,4 +1,5 @@
 import styles from "./HomePage.module.css";
+import { Link, useLocation } from "react-router-dom";
 
 const today = new Date().toLocaleDateString("en-us", {
 	weekday: "long",
@@ -20,12 +21,14 @@ export default function HomePage({ popularMovies }) {
 				{popularMovies &&
 					popularMovies.map((movie) => (
 						<li key={movie.id} className={styles.movieCard}>
-							<h1 className={styles.movieHeading}>{movie.original_title}</h1>
-							<img
-								src={`http://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-								alt="film preview"
-								className={styles.movieImg}
-							/>
+							<Link to={`${movie.id}`}>
+								<h1 className={styles.movieHeading}>{movie.original_title}</h1>
+								<img
+									src={`http://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+									alt="film preview"
+									className={styles.movieImg}
+								/>
+							</Link>
 						</li>
 					))}
 			</ul>

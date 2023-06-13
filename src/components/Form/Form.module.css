@@ -23,8 +23,8 @@
     border: none;
     min-width: 60px;
     min-height: 44px;
-    padding: 9px 26px;
-    border-radius: 3px;
+    padding: 10px 30px;
+    border-radius: 5px;
     font-size: 16px;
     background: rgb(29, 129, 253);
     background: linear-gradient( 380deg, rgba(29, 129, 253, 1) 49%, rgba(251, 239, 26, 1) 50%);
