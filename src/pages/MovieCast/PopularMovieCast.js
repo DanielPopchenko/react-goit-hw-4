@@ -22,7 +22,9 @@ export default function PopularMovieCast() {
         {movieCast &&
           movieCast.map((cast) => (
             <li key={cast.credit_id} className={styles.actorCard}>
-              <p className={styles.actorName}>{cast.name}</p>
+              <p className={styles.actorName}>
+                {cast.name} / {cast.character}
+              </p>
               <img
                 src={`http://image.tmdb.org/t/p/w500/${cast.profile_path}`}
                 alt=""
